@@ -4,11 +4,11 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import ru.zanko.user.dto.UserForm;
 import ru.zanko.user.dto.UserForm.UserFormBuilder;
-import ru.zanko.user.entity.User;
+import ru.zanko.user.model.User;
 import ru.zanko.user.repository.UsersRepository;
 import ru.zanko.user.repository.UsersRepositoryImpl;
-import ru.zanko.user.servives.UserService;
-import ru.zanko.user.servives.UserServiceImpl;
+import ru.zanko.user.services.UserService;
+import ru.zanko.user.services.UserServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -21,7 +21,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet
+
+@WebServlet("/")
 public class CreateUserServlet extends HttpServlet {
 
     private HikariDataSource dataSource;

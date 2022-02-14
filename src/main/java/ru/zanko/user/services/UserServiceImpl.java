@@ -1,11 +1,10 @@
-package ru.zanko.user.servives;
+package ru.zanko.user.services;
 
 import ru.zanko.user.dto.UserForm;
-import ru.zanko.user.entity.User;
+import ru.zanko.user.model.User;
 import ru.zanko.user.repository.UsersRepository;
 
 import java.util.List;
-
 
 public class UserServiceImpl implements UserService {
 
@@ -55,3 +54,5 @@ public class UserServiceImpl implements UserService {
         usersRepository.updateUser(user);
     }
 }
+
+

@@ -1,8 +1,8 @@
 package ru.zanko.user.repository;
 
-import ru.zanko.user.entity.User;
-import ru.zanko.user.servives.UserService;
-import ru.zanko.user.servives.UserServiceImpl;
+import ru.zanko.user.model.User;
+import ru.zanko.user.services.UserService;
+import ru.zanko.user.services.UserServiceImpl;
 
 import javax.sql.DataSource;
 import java.sql.*;
@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.function.Function;
 
 public class UsersRepositoryImpl implements UsersRepository {
+
     private final DataSource dataSource;
     private UserService userService;
 
@@ -91,7 +92,6 @@ public class UsersRepositoryImpl implements UsersRepository {
         }
     }
 
-
     @Override
     public List<User> findAll() {
         List<User> users = new ArrayList<>();
@@ -154,5 +154,4 @@ public class UsersRepositoryImpl implements UsersRepository {
             throw new IllegalArgumentException(e);
         }
     }
-
 }

@@ -1,4 +1,4 @@
-package ru.zanko.user.entity;
+package ru.zanko.user.model;
 
 import lombok.*;
 import ru.zanko.user.dto.UserForm;
@@ -33,3 +33,4 @@ public class User {
         return userForm.stream().map(User::from).collect(Collectors.toList());
     }
 }
+

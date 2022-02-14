@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+         pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
     <title>User Management Application</title>
@@ -46,10 +46,10 @@
             <c:forEach var="user" items="${listUser}">
 
                 <tr>
-                    <td><c:out value="${user.id}"/></td>
-                    <td><c:out value="${user.firstName}"/></td>
-                    <td><c:out value="${user.lastName}"/></td>
-                    <td><c:out value="${user.age}"/></td>
+                    <td><c:out value="${user.id}" /></td>
+                    <td><c:out value="${user.firstName}" /></td>
+                    <td><c:out value="${user.lastName}" /></td>
+                    <td><c:out value="${user.age}" /></td>
                     <td><a href="edit?id=<c:out value='${user.id}' />">Edit</a>
                         &nbsp;&nbsp;&nbsp;&nbsp; <a
                                 href="delete?id=<c:out value='${user.id}' />">Delete</a></td>
@@ -62,3 +62,5 @@
 </div>
 </body>
 </html>
+
+
